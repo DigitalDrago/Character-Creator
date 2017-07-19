@@ -86,7 +86,7 @@ ul{
     border: none;
     cursor: pointer;
 }
-.dropbtnB:hover, .dropbtn:focus {
+.dropbtnB:hover, .dropbtnB:focus {
     background-color: #3e8e41;
 }
 .dropdownB {
@@ -274,9 +274,9 @@ function myFunctionB() {
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtnB')) {
     var dropdownsB = document.getElementsByClassName("dropdown-contentB");
-    var i;
-    for (i = 0; i < dropdownsB.length; i++) {
-      var openDropdownB = dropdowns[i];
+    var iB;
+    for (iB = 0; iB < dropdownsB.length; iB++) {
+      var openDropdownB = dropdownsB[iB];
       if (openDropdownB.classList.contains('showB')) {
         openDropdownB.classList.remove('showB');
       }
