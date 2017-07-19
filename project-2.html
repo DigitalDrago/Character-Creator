@@ -7,13 +7,10 @@
 
 img {
 	position: absolute;
-	margin-left: 0%;
-display:block;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
   height:50%;
-}
-
-button{
-  margin-top:20%;
 }
 
 ul{
@@ -22,38 +19,38 @@ ul{
 }
 
 .base{
-	visibility:hidden;
-  z-index: -10;
+	visibility:visible;
+  z-index: 0;
 }
 
 .hair{
 	visibility:hidden;
-  z-index: 2;
+  z-index: 7;
 }
 
 .eyes{
 	visibility:hidden;
-  z-index: 2;
+  z-index: 6;
 }
 
 .nose{
 	visibility:hidden;
-  z-index: 2;
+  z-index: 5;
 }
 
 .mouth{
 	visibility:hidden;
-  z-index: 2;
+  z-index: 4;
 }
 
 .hat{
 	visibility:hidden;
-  z-index: 2;
+  z-index: 9;
 }
 
 .top{
 	visibility:hidden;
-  z-index: 2;
+  z-index: 3;
 }
 
 .bottom{
@@ -63,7 +60,22 @@ ul{
 
 .shoes{
 	visibility:hidden;
-  z-index: 2;
+  z-index: 1;
+}
+
+.neck{
+	visibility:hidden;
+  z-index: 8;
+}
+
+.waist{
+	visibility:hidden;
+  z-index: 11;
+}
+
+.hand{
+	visibility:hidden;
+  z-index: 10;
 }
 
 table, th, td {
@@ -78,12 +90,7 @@ th, td {
 
 <body>
 
-<h2>DRESS UP GAME</h2>
-<table style="width:100%">
-
-  <tr>
-    <th rowspan="13">
-      <span style="color: #dddddd">&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;</span>
+<h2>Character Creator</h2>
 
 			<img src="base-2-dark.png" alt="base-2-dark" class="base" id="pbd">
 			<img src="base-2-med1.png" alt="base-2-med1" class="base" id="pbm">
@@ -91,23 +98,16 @@ th, td {
 			<img src="base-2-blue1.png" alt="base-2-blue1" class="base" id="pbb">
 			<img src="base-2-green1.png" alt="base-2-green1" class="base" id="pbg">
 
-	</th>
-    <td>
-      <b>Skin Color</b>
-			<ul>
-		    <li><button class="btn btn-default" name = "SB" id = "b1" onclick="buttonf1()" type="button">Light</button></li>
-		    <li><button class="btn btn-default" name = "SB" id = "b2" onclick="buttonf2()" type="button">Medium</button></li>
-		    <li><button class="btn btn-default" name = "SB" id = "b3" onclick="buttonf3()" type="button">Dark</button></li>
-		    <li><button class="btn btn-default" name = "SB" id = "b4" onclick="buttonf4()" type="button">Blue</button></li>
-		    <li><button class="btn btn-default" name = "SB" id = "b5" onclick="buttonf5()" type="button">Green</button></li>
-		  </ul></td>
-  </tr>
-  <tr>
-    <td>clothes dropdown here</td>
-  </tr>
-  </tr>
-    <td>body dropdown here</td>
-  </tr>
+	<div style = "border: 3px solid green; margin-left: 26%; 	margin-top: 6%;">
+        body-dropdown-here: base(buttons here) hair eyes nose mouth
+		    <button class="btn btn-default" name = "SB" id = "b1" onclick="buttonf1()" type="button">Light</button>
+		    <button class="btn btn-default" name = "SB" id = "b2" onclick="buttonf2()" type="button">Medium</button>
+		    <button class="btn btn-default" name = "SB" id = "b3" onclick="buttonf3()" type="button">Dark</button>
+		    <button class="btn btn-default" name = "SB" id = "b4" onclick="buttonf4()" type="button">Blue</button>
+		    <button class="btn btn-default" name = "SB" id = "b5" onclick="buttonf5()" type="button">Green</button>
+		    <br> <br> <br> <br> <br> <br> clothes-dropdown-here: hat neck top hands waist bottom shoes <br> <br> <br> <br> <br> <br> <br>
+	</div>
+
 
   <style>
   body {
@@ -115,9 +115,6 @@ th, td {
   }
   </style>
 
-
-
-</table>
 <!--
   <div id = "dd">
       <input type="button" value="Submit" name = "SB" id = "b1" onclick="getInput()">
