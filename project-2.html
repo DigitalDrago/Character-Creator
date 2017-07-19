@@ -7,8 +7,8 @@
 
 img {
 	position: absolute;
-	margin-left: 5%;
-display:inline-block;
+	margin-left: 0%;
+display:block;
   height:50%;
 }
 
@@ -70,7 +70,7 @@ table, th, td {
     border-collapse: collapse;
 }
 th, td {
-    padding: 5px;
+    padding: 10px;
     text-align: left;
 }
 </style>
@@ -82,14 +82,31 @@ th, td {
 <table style="width:100%">
 
   <tr>
-    <th rowspan="13">put image here:</th>
-    <td>skin</td>
+    <th rowspan="13">
+      <span style="color: #dddddd">&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;&block;</span>
+
+			<img src="base-2-dark.png" alt="base-2-dark" class="base" id="pbd">
+			<img src="base-2-med1.png" alt="base-2-med1" class="base" id="pbm">
+			<img src="base-2-light.png" alt="base-2-light" class="base" id="pbl">
+			<img src="base-2-blue1.png" alt="base-2-blue1" class="base" id="pbb">
+			<img src="base-2-green1.png" alt="base-2-green1" class="base" id="pbg">
+
+	</th>
+    <td>
+      <b>Skin Color</b>
+			<ul>
+		    <li><button class="btn btn-default" name = "SB" id = "b1" onclick="buttonf1()" type="button">Light</button></li>
+		    <li><button class="btn btn-default" name = "SB" id = "b2" onclick="buttonf2()" type="button">Medium</button></li>
+		    <li><button class="btn btn-default" name = "SB" id = "b3" onclick="buttonf3()" type="button">Dark</button></li>
+		    <li><button class="btn btn-default" name = "SB" id = "b4" onclick="buttonf4()" type="button">Blue</button></li>
+		    <li><button class="btn btn-default" name = "SB" id = "b5" onclick="buttonf5()" type="button">Green</button></li>
+		  </ul></td>
   </tr>
   <tr>
-    <td>clothes</td>
+    <td>clothes dropdown here</td>
   </tr>
   </tr>
-    <td>head</td>
+    <td>body dropdown here</td>
   </tr>
 
   <style>
@@ -108,29 +125,14 @@ th, td {
     <br/>
   </div> -->
 
-	<ul>
-    <li><button class="btn btn-default" name = "SB" id = "b1" onclick="buttonf1()" type="button">s1s</button></li>
 
-    <li><button class="btn btn-default" name = "SB" id = "b2" onclick="buttonf2()" type="button">s2s</button></li>
-  </ul>
 
   <div id = "de">
 
   </div>
 
   <div id = "dpic">
-    <img src="Pink_Slime_SP.png" alt="Pink_Slime_SP" class="shoes" id="picpk">
-    <img src="Tabby_Slime_SP.png" alt="Tabby_Slime_SP" class="shoes" id="pictb">
-    <img src="Phosphor_Slime_SP.png" alt="Phosphor_Slime_SP" class="shoes" id="picph">
-    <img src="Rock_Slime.png" alt="Rock_Slime" class="shoes" id="picrk">
-    <img src="Puddle_Slime_SP.png" alt="Puddle_Slime_SP" class="shoes" id="picpud">
-    <img src="Tarr.png" alt="Tarr" class="shoes" id="pictarr">
-    <img src="background1.png" alt="background1" class="base" id="bottom4" />
-		<img src="base-2-dark.png" alt="base-2-dark" class="base" id="pbd">
-    <img src="base-2-med1.png" alt="base-2-med1" class="base" id="pbm">
-    <img src="base-2-light.png" alt="base-2-light" class="base" id="pbl">
-    <img src="base-2-blue1.png" alt="base-2-blue1" class="base" id="pbb">
-    <img src="base-2-green1.png" alt="base-2-green1" class="base" id="pbg">
+
   </div>
 
 
@@ -144,29 +146,35 @@ th, td {
 
 <script type="text/javascript">
 
+var baseA = ["pbd", "pbm", "pbl", "pbb", "pbg"];
+
+function buttonF(varA,show){
+	for (var i = 0; i < varA.length; i += 1){
+		document.getElementById(varA[i]).style.visibility = "hidden";
+	}
+  document.getElementById(varA[show]).style.visibility = "visible";
+}
+
 function buttonf1(){
-  document.getElementById("picpk").style.visibility = "visible";
-  document.getElementById("pictarr").style.visibility = "hidden";
-  document.getElementById("pictb").style.visibility = "hidden";
-  document.getElementById("bottom4").style.visibility = "visible";
-  document.getElementById("picrk").style.visibility = "hidden";
-  document.getElementById("pbd").style.visibility = "hidden";
-	document.getElementById("pbm").style.visibility = "hidden";
-	document.getElementById("pbl").style.visibility = "visible";
-	document.getElementById("pbb").style.visibility = "hidden";
-	document.getElementById("pbg").style.visibility = "hidden";
+	buttonF(baseA,2);
 }
+
 function buttonf2(){
-  document.getElementById("pictarr").style.visibility = "hidden";
-  document.getElementById("pictb").style.visibility = "visible";
-  document.getElementById("picph").style.visibility = "hidden";
-  document.getElementById("bottom4").style.visibility = "hidden";
-  document.getElementById("pbd").style.visibility = "visible";
-	document.getElementById("pbm").style.visibility = "hidden";
-	document.getElementById("pbl").style.visibility = "hidden";
-	document.getElementById("pbb").style.visibility = "hidden";
-	document.getElementById("pbg").style.visibility = "hidden";
+	buttonF(baseA,1);
 }
+
+function buttonf3(){
+	buttonF(baseA,0);
+}
+
+function buttonf4(){
+	buttonF(baseA,3);
+}
+
+function buttonf5(){
+	buttonF(baseA,4);
+}
+
 
 // $(document).ready(function(){
 //
