@@ -297,6 +297,27 @@ th, td {
 
 <h2>Character Creator</h2>
 
+
+<div id = "myDiv">
+	<h1> Name your character </h1>
+<input type "text" name= "baseinput" id="myText">
+  <input type= "button" value="submit" onclick="getTextInput()">
+	<div id = "myName">
+	</div>
+</div>
+
+
+<script>
+
+
+	function getTextInput(){
+	  var input = document.getElementById("myText").value;
+	  document.getElementById("myName").innerHTML = "<br />" + "<b>Hi, My name is </b> " + "<b>"+input+"</b>";
+	}
+
+</script>
+
+
 			<img src="face-dumb.png" alt="face-dumb" class="eyes" id="dumbface">
 
 			<img src="base-2-transparent.png" alt="base-2-transparent" class="baseT" id="pbt">
